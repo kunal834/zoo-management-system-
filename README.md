@@ -4,11 +4,14 @@ using namespace std;
 
 // zoo management system
 class zoo{
-    public :
     int a ;
     int b ;
     int c ;
    
+
+    public :
+    // Constructor to initialize variables
+ zoo() : a(0), b(0), c(0) {}
 
 
     void cage( void )
@@ -30,13 +33,9 @@ void zoo_staff(void )
     cin>>c ;
 }
 
-
-
-
 };
 
 class animalspecies : public zoo{
-   public:
    int amphibians;
    int reptiles; 
    int birds;
@@ -44,6 +43,12 @@ class animalspecies : public zoo{
    int fishes;
    int insects ;
     
+   public:
+
+   // Constructor to initialize variables
+ animalspecies() : amphibians(0), reptiles(0), birds(0), mammals(0), fishes(0), insects(0) {}
+
+ 
    void amphibianspecies( void )
    {
        cout<<"the total no. of amphibian species in the zoo is as of now :"<<amphibians<<endl;
@@ -83,11 +88,14 @@ void birdspecies(void){
 };
 
 class zoobudget : public animalspecies{
-    public:
     int visitors;
     int ticket_price;
     int total_income;
 
+
+    public:
+    // Constructor to initialize variables
+ zoobudget() : visitors(0), ticket_price(0), total_income(0) {}
 
     
     void visitor(void)
@@ -110,11 +118,13 @@ class zoobudget : public animalspecies{
 };
 
 class maintainance  : public zoobudget{
-    public:
     int food;
     int staff_salary;
     int infrastructure_cost;
 
+    public:
+     // Constructor to initialize variables
+  maintainance() : food(0), staff_salary(0), infrastructure_cost(0) {}
     
     void foodcost(void)
     {
